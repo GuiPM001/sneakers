@@ -42,7 +42,9 @@ export default function Cart(props: CartProps) {
                 </button>
               </div>
             )}
-            <button className="h-14 min-h-[3.5rem] w-full rounded-lg bg-orange-500 text-white font-bold">Checkout</button>
+            <button className="h-14 min-h-[3.5rem] w-full rounded-lg bg-orange-500 text-white font-bold cursor-not-allowed">
+              Checkout
+            </button>
           </div>
 
           : <div className="px-5 md:pt-16 flex h-60 md:h-72 justify-center items-center">

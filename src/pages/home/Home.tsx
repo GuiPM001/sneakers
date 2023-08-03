@@ -124,7 +124,7 @@ export default function Home() {
                 rounded-lg
                 py-4
                 shadow-2xl shadow-orange-200
-                hover:bg-orange-700
+                hover:bg-orange-300
                 transition duration-150 ease-in-out
                 active:scale-95'
             >

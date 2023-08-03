@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import logo from "../../assets/images/logo.svg";
 import avatar from '../../assets/images/avatar.png';
 import Menu from "./components/Menu";
@@ -9,7 +9,7 @@ import { CartContext } from "../../providers/CartProvider";
 export default function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
   
-  const { handleCart } = useContext(CartContext);
+  const { handleCart, quantityProducts } = useContext(CartContext);
 
   return (
     <header className="bg-white w-screen md:w-11/12 top-0 p-2 md:p-4 fixed md:border-b md:border-gray-300">
@@ -36,7 +36,13 @@ export default function Header() {
 
         <div className="flex items-center justify-between mx-4">
           <button onClick={() => handleCart()}>
-            <IoCartOutline size={25} className="mx-2 cursor-pointer" color='gray' />
+            <IoCartOutline size={25} className="mx-2 cursor-pointer" color='black' />
+            
+            {quantityProducts > 0 && 
+              <div className="bg-orange-400 rounded-xl text-white font-bold text-xs w-6 absolute right-20 top-8">
+                {quantityProducts}
+              </div>
+            }
           </button>
           <img src={avatar} className="ml-4 md:ml-6 h-7 w-7" />
         </div>
