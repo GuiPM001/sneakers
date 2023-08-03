@@ -39,7 +39,7 @@ export default function Header() {
             <IoCartOutline size={25} className="mx-2 cursor-pointer" color='black' />
             
             {quantityProducts > 0 && 
-              <div className="bg-orange-400 rounded-xl text-white font-bold text-xs w-6 absolute right-20 top-8">
+              <div className="bg-orange-400 rounded-xl text-white font-bold text-xs w-6 absolute right-16 top-4  md:right-20 md:top-8">
                 {quantityProducts}
               </div>
             }
